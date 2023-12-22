@@ -1,0 +1,72 @@
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+   
+   
+}
+
+footer {
+
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    
+   
+}
+
+.main{
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#table {
+    text-align: center;
+    align-items: center;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    height: 500px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+}
+
+.button2{
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+}
+
+.punkteanzeige{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.punkteanzeige h2 {
+    display: inline;
+    margin: 5px;
+}
