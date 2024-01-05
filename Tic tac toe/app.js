@@ -47,90 +47,119 @@ button.forEach(function(button) {
             xo = "x"
         }
         test();
+        draw();
     });
 });
 
 function test() { 
     if(button1.innerHTML === "x" && button2.innerHTML === "x" && button3.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button1.innerHTML === "o" && button2.innerHTML === "o" && button3.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 
     if(button4.innerHTML === "x" && button5.innerHTML === "x" && button6.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button4.innerHTML === "o" && button5.innerHTML === "o" && button6.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 
     if(button7.innerHTML === "x" && button8.innerHTML === "x" && button9.innerHTML === "x" ){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button7.innerHTML === "o" && button8.innerHTML === "o" && button9.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
     
     if(button1.innerHTML === "x" && button4.innerHTML === "x" && button7.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button1.innerHTML === "o" && button4.innerHTML === "o" && button7.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 
     if(button2.innerHTML === "x" && button5.innerHTML === "x" && button8.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button2.innerHTML === "o" && button5.innerHTML === "o" && button8.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 
     if(button3.innerHTML === "x" && button6.innerHTML === "x" && button9.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button3.innerHTML === "o" && button6.innerHTML === "o" && button9.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 
     if(button1.innerHTML === "x" && button5.innerHTML === "x" && button9.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
     
     if(button1.innerHTML === "o" && button5.innerHTML === "o" && button9.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
@@ -138,17 +167,29 @@ function test() {
 
     if(button3.innerHTML === "x" && button5.innerHTML === "x" && button7.innerHTML === "x"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_x = punkte_x + 1;
         punktex.innerHTML = punkte_x;
     }
 
     if(button3.innerHTML === "o" && button5.innerHTML === "o" && button7.innerHTML === "o"){
         won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Win";
         punkte_o = punkte_o + 1;
         punkteo.innerHTML = punkte_o;
     }
 }
 
+function draw() {
+    if((button1.innerHTML !== "1") && (button2.innerHTML !== "2") && (button3.innerHTML !== "3") && (button4.innerHTML !== "4") && (button5.innerHTML !== "5") && (button6.innerHTML !== "6") && (button7.innerHTML !== "7") && (button8.innerHTML !== "8") && (button9.innerHTML !== "9")){
+        won();
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "Draw";
+       
+    }
+}
 
 function won() {
     punkteo.innerHTML = punkte_o;
@@ -164,9 +205,14 @@ function newrund() {
     newrund.innerHTML ="new Rund";
     let cancel = document.createElement("button");
     cancel.innerHTML = "cancel";
+    h1 = document.createElement("h1");
+    h1.setAttribute("id", "h1_d");
+    parent.appendChild(h1);
     parent.appendChild(newrund);
     parent.appendChild(cancel);
     newrund.addEventListener("click", function () {
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "";
         button1.innerHTML = "1";
         button2.innerHTML = "2";
         button3.innerHTML = "3";
@@ -180,6 +226,8 @@ function newrund() {
         cancel.remove();
     });
     cancel.addEventListener("click", function () {
+        h1 = document.getElementById("h1_d");
+        h1.innerHTML = "";
         newrund.remove();
         cancel.remove();
     });
